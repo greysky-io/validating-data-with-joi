@@ -31,7 +31,7 @@ app.get('/books', (req, res) => {
 
 app.post('/books', (req, res) => {
   books.push(req.body);
-  res.send();
+  res.send(JSON.stringify(res.body));
 });
 
 app.listen(port, () => console.log(`App is running on ${port}`));
